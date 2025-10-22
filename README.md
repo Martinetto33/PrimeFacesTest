@@ -1,4 +1,4 @@
-# JSF Test program
+# JSF + Primefaces Test program
 <p align="right" style="font-size: large"><em>by Alin Bordeianu</em></p>
 
 ___
