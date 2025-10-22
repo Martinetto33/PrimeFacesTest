@@ -11,10 +11,10 @@ Get used to it.
 
 ## What to do with this repo
 1. Open IntelliJ IDEA and create a new project, then select "Clone repository".
-2. In the URL field, copy and paste this: https://github.com/Martinetto33/JSF-Test.git.
+2. In the URL field, copy and paste this: https://github.com/Martinetto33/PrimeFacesTest.git.
 3. Trust the project to allow execution.
 4. Once the project is open, you'll need to set up a running configuration. On the left side of the top bar, you'll find something next to the running button that says "Current file" or similar. Expand the dropdown menu, and select "Edit Configurations...".
-5. I suggest you use WildFly as an application server, you can download the latest version from https://www.wildfly.org/downloads/.
+5. I suggest you use WildFly as an application server. You can download the latest version from https://www.wildfly.org/downloads/.
 6. Once you have it, look for a WildFly configuration of a Local server and select it.
 7. You may have to solve a warning in the configuration regarding the WAR file to be used. Click on the hint provided by the IDE and select the *Build 'JSFTest:war exploded' artifact* option.
 8. Run and you should see this messy project in action!
