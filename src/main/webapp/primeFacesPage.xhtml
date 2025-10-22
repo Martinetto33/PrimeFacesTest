@@ -11,6 +11,13 @@
                 width: 50%;
                 margin: 0 auto;
             }
+
+            /* A default class present in primefaces internals.
+            See: https://primefaces.github.io/primefaces/10_0_0/#/components/datatable?id=skinning */
+            .ui-datatable {
+                width: 50%;
+                margin: 1em auto;
+            }
         </style>
     </h:head>
     <h:body>
@@ -22,10 +29,15 @@
                         <p>
                             This page was created by following this tutorial:
                             <p:link
-                                href="https://www.baeldung.com/jsf-primefaces"
-                                value="https://www.baeldung.com/jsf-primefaces"
+                                    href="https://www.baeldung.com/jsf-primefaces"
+                                    value="https://www.baeldung.com/jsf-primefaces"
                             />.
                         </p>
+                    </p:column>
+                </p:row>
+                <p:row>
+                    <p:column>
+                        <h:outputText value="#{helloPFBean.getFirstName().concat(' ').concat(helloPFBean.getLastName())}"/>
                     </p:column>
                 </p:row>
                 <p:row>
@@ -34,6 +46,21 @@
                     </p:column>
                 </p:row>
             </p:panelGrid>
+            <h:panelGrid columns="2" styleClass="customPanel">
+                <p:outputLabel for="jsfCompSuite" value="Component Suite" />
+                <p:selectOneRadio id="jsfCompSuite" value="#{helloPFBean.componentSuite}">
+                    <f:selectItem itemLabel="ICEfaces" itemValue="ICEfaces" />
+                    <f:selectItem itemLabel="RichFaces" itemValue="Richfaces" />
+                </p:selectOneRadio>
+            </h:panelGrid>
+            <p:dataTable var="technology" tableStyleClass="customPanel" value="#{helloPFBean.technologies}">
+                <p:column headerText="Name">
+                    <h:outputText value="#{technology.name}" />
+                </p:column>
+                <p:column headerText="Version">
+                    <h:outputText value="#{technology.version}" />
+                </p:column>
+            </p:dataTable>
         </h:form>
     </h:body>
 </f:view>
