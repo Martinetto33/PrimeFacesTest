@@ -15,25 +15,22 @@
     </h:head>
     <h:body>
         <h:form>
-            <p:panelGrid columns="2" styleClass="customPanel" style="border:0 none; background-color:transparent;">
+            <p:panelGrid columns="1" styleClass="customPanel" style="border:0 none; background-color:transparent;">
                 <p:row>
                     <p:column>
-                        <h1>PrimeFaces Demo</h1>
+                        <h1>PrimeFaces Demo (From Baeldung)</h1>
+                        <p>
+                            This page was created by following this tutorial:
+                            <p:link
+                                href="https://www.baeldung.com/jsf-primefaces"
+                                value="https://www.baeldung.com/jsf-primefaces"
+                            />.
+                        </p>
                     </p:column>
                 </p:row>
                 <p:row>
                     <p:column>
-                        <p>If you see this, then the project ran correctly.</p>
-                    </p:column>
-                </p:row>
-                <p:row>
-                    <p:column>
-                        <p:spinner/>
-                    </p:column>
-                </p:row>
-                <p:row>
-                    <p:column>
-                        <p:commandButton action="primeFacesPage" value="Go to other PrimeFaces Page"/>
+                        <p:commandButton action="test" value="Home"/>
                     </p:column>
                 </p:row>
             </p:panelGrid>
