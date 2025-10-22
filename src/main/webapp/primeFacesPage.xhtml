@@ -53,11 +53,19 @@
                     <f:selectItem itemLabel="RichFaces" itemValue="Richfaces" />
                 </p:selectOneRadio>
             </h:panelGrid>
-            <p:dataTable var="technology" tableStyleClass="customPanel" value="#{helloPFBean.technologies}">
-                <p:column headerText="Name">
+            <p:dataTable
+                    var="technology"
+                    tableStyleClass="customPanel"
+                    value="#{helloPFBean.technologies}"
+                    rows="3"
+                    paginator="true" paginatorPosition="both"
+                    paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+                    currentPageReportTemplate="{startRecord}-{endRecord} of {totalRecords} records"
+                    rowsPerPageTemplate="5,10,{ShowAll|'All'}">
+                <p:column headerText="Name" sortBy="#{technology.name}" filterBy="#{technology.name}" filterMatchMode="contains" filterPlaceholder="Filter by name">
                     <h:outputText value="#{technology.name}" />
                 </p:column>
-                <p:column headerText="Version">
+                <p:column headerText="Version" filterBy="#{technology.version}" filterMatchMode="startsWith" filterPlaceholder="Filter by version">
                     <h:outputText value="#{technology.version}" />
                 </p:column>
             </p:dataTable>

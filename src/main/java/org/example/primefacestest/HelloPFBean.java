@@ -13,9 +13,17 @@ public class HelloPFBean implements Serializable {
     private String firstName = "Prime";
     private String lastName = "Faces";
     private String componentSuite;
-    private List<Technology> technologies = List.of(
-            new Technology("Java", "10"),
-            new Technology("Spring", "5.0")
+    private List<Technology> technologies = new ArrayList<>(
+            List.of
+                    (
+                            new Technology("Java", "10"),
+                            new Technology("Spring", "5.0"),
+                            new Technology("Spring Boot", "5.0"),
+                            new Technology("IntelliJ IDEA", "2025.2.3"),
+                            new Technology("Hibernate", "5.0"),
+                            new Technology("Ansible", "3.2.1"),
+                            new Technology("PostgreSQL", "18.18.18")
+                    )
     );
 
     public String getFirstName() {
